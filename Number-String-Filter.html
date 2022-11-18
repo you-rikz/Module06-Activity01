@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Act2 Mod6</title>
+</head>
+<body>
+    
+    <!-- <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button> -->
+
+    <div >
+    
+    <label> Lucky Number:</label>
+    <input placeholder="Enter your Lucky Number Here" ng-model="val2" type="number" class="input">
+    <div class="card">
+        <p class="title">Your Lucky Number</p>
+        <div class="pricecontainer">
+          <p class="price">{{val2}}</p>
+        </div>
+      </div>
+    </div>
+
+    <input type="text" name="text" ng-model="nameControl"  class="input" placeholder="Enter your name here">
+        <!-- <input type="text" ng-model="nameControl"  size="30"
+        placeholder="Enter your name here">  -->
+        
+        <div class="card">
+            <p class="title">Your Name</p>
+            <div class="pricecontainer">
+              <p class="price">My name is{{nameControl}} and my lucky number is {{val2}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+
+    <!-- <div ng-app ng-init="value1=11; value2=10">
+        <p>The total of value 1 and value 2: {{value1 + value2}}</p>
+    </div> -->
+    
+    <!-- <div ng-app ng-init="courseinfo={Course:'BSIT', YearLevel:'3rd Year'}">
+    <p>Course Information: {{courseinfo.Course + '-' + courseinfo.YearLevel}}</p>
+</div> -->
+
+<!-- <div ng-app ng-init="Course='BSIT'; YearLevel='3rd Year'">
+    <p>Course Information: {{Course + '-' + YearLevel}}</p>
+</div> -->
+<!-- <div class="container">
+<div ng-app>
+    <label> Value 1:</label>
+    <input type="number" ng-model="val1" autocomplete="off"  placeholder="Type a value" name="text" class="input">
+    <label> Value 2:</label>
+    <input type="number" ng-model="val2" autocomplete="off" placeholder="Type a value" name="text" class="input">
+    <p>Total: {{val1 + val2 | currency:"₱"}}</p>
+</div>
+</div> -->
+
+</body>
+<style>
+/* From uiverse.io by @alexruix */
+.input {
+ line-height: 28px;
+ border: 2px solid transparent;
+ border-bottom-color: #777;
+ padding: .2rem 0;
+ outline: none;
+ background-color: transparent;
+ color: #0d0c22;
+ -webkit-transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+ transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input:focus, input:hover {
+ outline: none;
+ padding: .2rem 1rem;
+ border-radius: 1rem;
+ border-color: #7a9cc6;
+}
+
+.input::-webkit-input-placeholder {
+ color: #777;
+}
+
+.input::-moz-placeholder {
+ color: #777;
+}
+
+.input:-ms-input-placeholder {
+ color: #777;
+}
+
+.input::-ms-input-placeholder {
+ color: #777;
+}
+
+.input::placeholder {
+ color: #777;
+}
+
+.input:focus::-webkit-input-placeholder {
+ opacity: 0;
+ -webkit-transition: opacity .3s;
+ transition: opacity .3s;
+}
+
+.input:focus::-moz-placeholder {
+ opacity: 0;
+ -moz-transition: opacity .3s;
+ transition: opacity .3s;
+}
+
+.input:focus:-ms-input-placeholder {
+ opacity: 0;
+ -ms-transition: opacity .3s;
+ transition: opacity .3s;
+}
+
+.input:focus::-ms-input-placeholder {
+ opacity: 0;
+ -ms-transition: opacity .3s;
+ transition: opacity .3s;
+}
+
+.input:focus::placeholder {
+ opacity: 0;
+ -webkit-transition: opacity .3s;
+ transition: opacity .3s;
+}
+
+
+.card {
+    
+ width: 190px;
+ height: 150px;
+ background: rgb(45, 45, 45);
+ -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+ -webkit-transition-duration: 0.5s;
+         transition-duration: 0.5s;
+}
+
+.title {
+ text-align: center;
+ margin-top: 0.5em;
+ font-weight: bold;
+ font-size: x-large;
+ color: rgb(200,200,200);
+}
+
+.pricecontainer {
+ width: 100%;
+ margin-top: 0.7em;
+ background-color: rgb(30,30,30);
+ -webkit-box-shadow: inset 0px 0px 2em rgba(0, 0, 0, 0.3);
+         box-shadow: inset 0px 0px 2em rgba(0, 0, 0, 0.3);
+}
+
+.price {
+ text-align: center;
+ color: rgb(180,180,180);
+ font-size: x-large;
+ font-weight: bold;
+ padding: 0.75em 0 0 0;
+}
+
+.pricedescriptor {
+ text-align: center;
+ color: rgb(118, 118, 118);
+ font-size: medium;
+ padding: 0 0 1em 0;
+}
+
+.includes {
+ text-align: center;
+ color: rgb(110, 110, 110);
+ margin-top: 0.6em;
+ font-size: small;
+ font-weight: bold;
+}
+
+.benefitlist li {
+ color: rgb(150,150,150);
+ font-size: small;
+ text-align: center;
+}
+
+.benefitlist li:nth-child(1) {
+ margin-top: 0.4em;
+}
+
+.btncontainer {
+ text-align: center;
+}
+
+.btncontainer button {
+ margin-top: 1em;
+ padding: 0.5em 0.8em 0.5em 0.8em;
+ border-style: none;
+ border-radius: 1000000px;
+ color: rgb(239, 239, 239);
+ font-weight: bold;
+ background-image: linear-gradient(45deg, #fe4fe1 0%, #3f00fe 100%);
+ -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
+ transition: -webkit-box-shadow 0.15s ease-in-out;
+ transition: box-shadow 0.15s ease-in-out;
+ transition: box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.btncontainer button:hover {
+ -webkit-box-shadow: inset 0px 0px 5px rgb(0,0,0);
+         box-shadow: inset 0px 0px 5px rgb(0,0,0);
+ -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
+ transition: -webkit-box-shadow 0.15s ease-in-out;
+ transition: box-shadow 0.15s ease-in-out;
+ transition: box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+    
+    
+</style>
+
+</html>
